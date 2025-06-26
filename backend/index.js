@@ -34,11 +34,11 @@ app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirnameResolved, "../frontend/dist")));
 
-  app.get("/*", (req, res) => {      // leading slash ✓
-    res.sendFile(
-      path.join(__dirnameResolved, "../frontend/dist/index.html")
-    );
-  });
+  app.use((req, res) => {
+     res.sendFile(
+       path.join(__dirnameResolved, "../frontend/dist/index.html")
+     );
+   });
 }
 
 server.listen(PORT, () => {
