@@ -31,15 +31,7 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirnameResolved, "../frontend/dist")));
 
-  app.use((req, res) => {
-     res.sendFile(
-       path.join(__dirnameResolved, "../frontend/dist/index.html")
-     );
-   });
-}
 
 server.listen(PORT, () => {
   console.log("✅ Server running on PORT:", PORT);
