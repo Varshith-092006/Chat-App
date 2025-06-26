@@ -19,7 +19,8 @@ initializeSocket(server);         // ✅ init socket on same server
 const PORT = process.env.PORT || 5000;
 const __dirnameResolved = path.resolve();
 
-app.use(express.json());
+app.use(express.json({ limit: "10mb" })); // ⬅️ increase from default 100kb
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
