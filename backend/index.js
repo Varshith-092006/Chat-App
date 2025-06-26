@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["chat-qmt14fcxw-varshiths-projects-3c9d2af7.vercel.app"],
     credentials: true,
   })
 );
