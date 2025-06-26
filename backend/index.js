@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["chat-qmt14fcxw-varshiths-projects-3c9d2af7.vercel.app"],
+    origin: ["https://chat-app-omega-olive.vercel.app"],
     credentials: true,
   })
 );

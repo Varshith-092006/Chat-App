@@ -6,7 +6,7 @@ const userSocketMap = {}; // { userId: socketId }
 export function initializeSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: ["chat-qmt14fcxw-varshiths-projects-3c9d2af7.vercel.app"],
+      origin: ["https://chat-app-omega-olive.vercel.app"],
     },
   });
 
